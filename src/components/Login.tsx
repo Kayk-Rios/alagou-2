@@ -53,7 +53,6 @@ const Login = () => {
         } else {
           await router.replace('/dashboard/dashboard');
         }
-        window.location.reload();
       }
     } catch (err) {
       setError('Erro ao conectar ao servidor.');
