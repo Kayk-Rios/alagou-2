@@ -1,40 +1,168 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+- Alagou Aí 🚨
+Link: https://alagou-ai.netlify.app/
+📌 Visão Geral
+Alagou Aí é uma plataforma colaborativa onde usuários podem registrar e visualizar pontos de alagamento em suas regiões. O sistema utiliza:
 
-## Getting Started
+Next.js para o frontend
 
-First, run the development server:
+Tailwind CSS para estilização
 
-```bash
+JWT para autenticação
+
+Cookies para gerenciamento de sessão
+
+🚀 Funcionalidades
+👤 Usuário Comum
+✅ Criar conta e autenticar-se
+
+📝 Criar postagens com:
+
+Estado, cidade e bairro (selecionados de listas)
+
+Nível de gravidade (Pouca água, Muita água, Completamente alagado)
+
+🔍 Listar locais alagados com filtros por:
+
+Estado
+
+Cidade
+
+Bairro
+
+👀 Visualizar detalhes de postagens (somente leitura)
+
+🛠️ Administrador
+👥 Gerenciar usuários e postagens
+
+✏️ Atualizar/Excluir qualquer publicação
+
+📊 Gerar relatórios com todos os dados
+
+🔧 Tecnologias Utilizadas
+Frontend: Next.js + Tailwind CSS
+
+Autenticação: JWT + Cookies
+
+Gerenciamento de Estado: React Context API
+
+API: GraphQL
+
+📡 Queries e Mutations da API
+🔍 Consultas (Queries)
+graphql
+# Listar todos os posts
+query Posts {
+  posts {
+    id
+    title
+    description
+    floodLevel
+    address
+    neighborhood
+    createdAt
+    author { id name }
+    city { id name state { id name uf } }
+  }
+}
+
+# Obter post específico
+query Post($id: Float!) {
+  post(id: $id) {
+    id
+    title
+    description
+    floodLevel
+    address
+    neighborhood
+    createdAt
+    author { id name email }
+    city { id name state { id name uf } }
+  }
+}
+
+# Posts filtrados
+query FilteredPosts {
+  postsByState(stateId: 1) { id title }
+  postsByCity(cityId: 1) { id title }
+  postsByNeighborhood(neighborhood: "Centro") { id title }
+}
+
+# Listar estados com cidades
+query {
+  states {
+    id
+    name
+    cities { id name }
+  }
+}
+✏️ Mutations
+graphql
+# Autenticação
+mutation Login {
+  login(loginInput: { email: "user@example.com", password: "sua_senha" }) {
+    token
+    user { id }
+  }
+}
+
+# Registro
+mutation Signup {
+  signup(signupInput: {
+    email: "user@example.com",
+    password: "senha123",
+    name: "Usuário Teste"
+  }) {
+    token
+    user { id email name isAdmin }
+  }
+}
+
+# Criar postagem (requer token)
+mutation CreatePost {
+  createPost(createPostInput: {
+    title: "Alagamento Zona Norte",
+    description: "Água acima dos prédios",
+    floodLevel: HIGH,
+    cityId: 3,
+    address: "Rua Brasabante",
+    neighborhood: "Norte"
+  }) {
+    id title address neighborhood
+  }
+}
+
+# Admin - Gerenciamento
+mutation AdminUpdatePost {
+  adminUpdatePost(updatePostInput: { id: 1, floodLevel: HIGH }) {
+    id floodLevel
+  }
+}
+
+mutation AdminDeletePost {
+  adminRemovePost(id: 1) { id }
+}
+🔐 Autenticação
+Todas as mutations protegidas requerem o token JWT no header:
+
+json
+{
+  "Authorization": "Bearer SEU_TOKEN_AQUI"
+}
+🛠️ Configuração do Ambiente
+Instale as dependências:
+
+bash
+npm install
+Configure as variáveis de ambiente:
+
+bash
+cp .env.example .env.local
+Inicie o servidor de desenvolvimento:
+
+bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🧑‍💻 Autor
+Kayk Dario - GitHub
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+🌊 Sobre o Projeto
+Plataforma colaborativa para registro de alagamentos, ajudando comunidades a identificar áreas de risco e autoridades a planejar ações preventivas
