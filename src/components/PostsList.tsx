@@ -1,5 +1,21 @@
-
 import { useEffect, useState } from 'react';
+
+type State = {
+  id: string;
+  name: string;
+  uf: string;
+};
+
+type City = {
+  id: string;
+  name: string;
+  state: State;
+};
+
+type Author = {
+  id: string;
+  name: string;
+};
 
 type Post = {
   id: string;
@@ -9,25 +25,14 @@ type Post = {
   address: string;
   neighborhood: string;
   createdAt: string;
-  author: {
-    id: string;
-    name: string;
-  };
-  city: {
-    id: string;
-    name: string;
-    state: {
-      id: string;
-      name: string;
-      uf: string;
-    };
-  };
+  author: Author;
+  city: City;
 };
 
 export default function PostsList() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [allPosts, setAllPosts] = useState<Post[]>([]);
-  const [cities, setCities] = useState<{ id: string; name: string }[]>([]);
+  const [cities, setCities] = useState<City[]>([]);
   const [selectedCityId, setSelectedCityId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -72,13 +77,15 @@ export default function PostsList() {
       if (json.errors) {
         setError(JSON.stringify(json.errors));
       } else {
-        setAllPosts(json.data.posts);
-        setPosts(json.data.posts);
+        const fetchedPosts: Post[] = json.data.posts;
+        setAllPosts(fetchedPosts);
+        setPosts(fetchedPosts);
 
+        // Extrai cidades únicas com tipagem segura
         const uniqueCities = Array.from(
-          new Map(json.data.posts.map((post: Post) => [post.city.id, post.city])).values()
+          new Map(fetchedPosts.map((post) => [post.city.id, post.city])).values()
         );
-        setCities(uniqueCities);
+        setCities(Array.from(uniqueCities));
       }
     } catch (err) {
       setError('Erro ao buscar os posts.');
@@ -174,7 +181,7 @@ export default function PostsList() {
 
       <ul className="grid grid-cols-2 gap-3">
         {posts.map((post) => (
-          <li key={post.id} className="border rounded p-4 shadow ">
+          <li key={post.id} className="border rounded p-4 shadow">
             <h3 className="text-xl font-bold">{post.title}</h3>
             <p>{post.description}</p>
             <p><strong>Bairro:</strong> {post.neighborhood}</p>
