@@ -1,57 +1,59 @@
-- Alagou Aí 🚨
+Claro, aqui está seu README completo com todos os trechos de código devidamente formatados com blocos de código Markdown:
 
-Link: https://alagou-ai.netlify.app/
+---
 
-📌 Visão Geral
-Alagou Aí é uma plataforma colaborativa onde usuários podem registrar e visualizar pontos de alagamento em suas regiões. O sistema utiliza:
+````markdown
+# - Alagou Aí 🚨
 
-Next.js para o frontend
+Link Front-end Site: https://alagou-ai.netlify.app/
 
-Tailwind CSS para estilização
+Link Back-end: https://github.com/Kayk-Rios/flood-report-api 
 
-JWT para autenticação
+## 📌 Visão Geral
 
-Cookies para gerenciamento de sessão
+**Alagou Aí** é uma plataforma colaborativa onde usuários podem registrar e visualizar pontos de alagamento em suas regiões. O sistema utiliza:
 
-🚀 Funcionalidades
-👤 Usuário Comum
-✅ Criar conta e autenticar-se
+- **Next.js** para o frontend  
+- **Tailwind CSS** para estilização  
+- **JWT** para autenticação  
+- **Cookies** para gerenciamento de sessão
 
+## 🚀 Funcionalidades
+
+### 👤 Usuário Comum
+
+✅ Criar conta e autenticar-se  
 📝 Criar postagens com:
 
-Estado, cidade e bairro (selecionados de listas)
-
-Nível de gravidade (Pouca água, Muita água, Completamente alagado)
+- Estado, cidade e bairro (selecionados de listas)
+- Nível de gravidade (Pouca água, Muita água, Completamente alagado)
 
 🔍 Listar locais alagados com filtros por:
 
-Estado
-
-Cidade
-
-Bairro
+- Estado
+- Cidade
+- Bairro
 
 👀 Visualizar detalhes de postagens (somente leitura)
 
-🛠️ Administrador
-👥 Gerenciar usuários e postagens
+### 🛠️ Administrador
 
-✏️ Atualizar/Excluir qualquer publicação
-
+👥 Gerenciar usuários e postagens  
+✏️ Atualizar/Excluir qualquer publicação  
 📊 Gerar relatórios com todos os dados
 
-🔧 Tecnologias Utilizadas
-Frontend: Next.js + Tailwind CSS
+## 🔧 Tecnologias Utilizadas
 
-Autenticação: JWT + Cookies
+- **Frontend**: Next.js + Tailwind CSS  
+- **Autenticação**: JWT + Cookies  
+- **Gerenciamento de Estado**: React Context API  
+- **API**: GraphQL
 
-Gerenciamento de Estado: React Context API
+## 📡 Queries e Mutations da API
 
-API: GraphQL
+### 🔍 Consultas (Queries)
 
-📡 Queries e Mutations da API
-🔍 Consultas (Queries)
-graphql
+```graphql
 # Listar todos os posts
 query Posts {
   posts {
@@ -66,7 +68,9 @@ query Posts {
     city { id name state { id name uf } }
   }
 }
+````
 
+```graphql
 # Obter post específico
 query Post($id: Float!) {
   post(id: $id) {
@@ -81,14 +85,18 @@ query Post($id: Float!) {
     city { id name state { id name uf } }
   }
 }
+```
 
+```graphql
 # Posts filtrados
 query FilteredPosts {
   postsByState(stateId: 1) { id title }
   postsByCity(cityId: 1) { id title }
   postsByNeighborhood(neighborhood: "Centro") { id title }
 }
+```
 
+```graphql
 # Listar estados com cidades
 query {
   states {
@@ -97,8 +105,11 @@ query {
     cities { id name }
   }
 }
-✏️ Mutations
-graphql
+```
+
+### ✏️ Mutations
+
+```graphql
 # Autenticação
 mutation Login {
   login(loginInput: { email: "user@example.com", password: "sua_senha" }) {
@@ -106,7 +117,9 @@ mutation Login {
     user { id }
   }
 }
+```
 
+```graphql
 # Registro
 mutation Signup {
   signup(signupInput: {
@@ -118,7 +131,9 @@ mutation Signup {
     user { id email name isAdmin }
   }
 }
+```
 
+```graphql
 # Criar postagem (requer token)
 mutation CreatePost {
   createPost(createPostInput: {
@@ -132,39 +147,59 @@ mutation CreatePost {
     id title address neighborhood
   }
 }
+```
 
+```graphql
 # Admin - Gerenciamento
 mutation AdminUpdatePost {
   adminUpdatePost(updatePostInput: { id: 1, floodLevel: HIGH }) {
     id floodLevel
   }
 }
+```
 
+```graphql
 mutation AdminDeletePost {
   adminRemovePost(id: 1) { id }
 }
-🔐 Autenticação
+```
+
+### 🔐 Autenticação
+
 Todas as mutations protegidas requerem o token JWT no header:
 
-json
+```json
 {
   "Authorization": "Bearer SEU_TOKEN_AQUI"
 }
-🛠️ Configuração do Ambiente
+```
+
+## 🛠️ Configuração do Ambiente
+
 Instale as dependências:
 
-bash
+```bash
 npm install
+```
+
 Configure as variáveis de ambiente:
 
-bash
+```bash
 cp .env.example .env.local
+```
+
 Inicie o servidor de desenvolvimento:
 
-bash
+```bash
 npm run dev
-🧑‍💻 Autor
-Kayk Dario - GitHub
+```
 
-🌊 Sobre o Projeto
-Plataforma colaborativa para registro de alagamentos, ajudando comunidades a identificar áreas de risco e autoridades a planejar ações preventivas
+## 🧑‍💻 Autor
+
+**Kayk Dario**
+
+## 🌊 Sobre o Projeto
+
+Plataforma colaborativa para registro de alagamentos, ajudando comunidades a identificar áreas de risco e autoridades a planejar ações preventivas.
+
+```
