@@ -215,11 +215,12 @@ Plataforma colaborativa para registro de alagamentos, ajudando comunidades a ide
 ![Captura de tela de 2025-05-25 00-19-01](https://github.com/user-attachments/assets/cc379390-7db3-48b7-b2c0-61d5ef205cc0)
 
 
-
-
-
-```
 ![Captura de tela de 2025-05-25 00-20-08](https://github.com/user-attachments/assets/7b2057a4-5d25-42a2-8dee-2b9dd57c4670)
 
 
 ![Captura de tela de 2025-05-25 00-19-43](https://github.com/user-attachments/assets/1c63576a-7205-4e05-973b-0ca417221fba)
+
+```
+
+
+
