@@ -18,6 +18,14 @@ Link Back-end: https://github.com/Kayk-Rios/flood-report-api
 - **JWT** para autenticação  
 - **Cookies** para gerenciamento de sessão
 
+## 🔧 Tecnologias Utilizadas
+
+- **Frontend**: Next.js + Tailwind CSS  
+- **Autenticação**: JWT + Cookies  
+- **Gerenciamento de Estado**: React Context API  
+- **API**: GraphQL
+
+
 ## 🚀 Funcionalidades
 
 ### 👤 Usuário Comum
