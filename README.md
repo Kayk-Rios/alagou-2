@@ -50,13 +50,6 @@ Link Back-end: https://github.com/Kayk-Rios/flood-report-api
 ✏️ Atualizar/Excluir qualquer publicação  
 📊 Gerar relatórios com todos os dados
 
-## 🔧 Tecnologias Utilizadas
-
-- **Frontend**: Next.js + Tailwind CSS  
-- **Autenticação**: JWT + Cookies  
-- **Gerenciamento de Estado**: React Context API  
-- **API**: GraphQL
-
 ## 📡 Queries e Mutations da API
 
 ### 🔍 Consultas (Queries)
