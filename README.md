@@ -1,4 +1,3 @@
-Claro, aqui está seu README completo com todos os trechos de código devidamente formatados com blocos de código Markdown:
 
 ---
 
