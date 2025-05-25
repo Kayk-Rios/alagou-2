@@ -10,7 +10,8 @@ Link Back-end: https://github.com/Kayk-Rios/flood-report-api
 
 ## 📌 Visão Geral
 
-**Alagou Aí** é uma plataforma colaborativa onde usuários podem registrar e visualizar pontos de alagamento em suas regiões. O sistema utiliza:
+**Alagou Aí** é uma plataforma colaborativa onde usuários podem registrar e visualizar
+ pontos de alagamento em suas regiões. O sistema utiliza:
 
 - **Next.js** para o frontend  
 - **Tailwind CSS** para estilização  
