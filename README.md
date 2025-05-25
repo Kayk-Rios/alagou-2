@@ -1,3 +1,5 @@
+![Captura de tela de 2025-05-25 00-19-57](https://github.com/user-attachments/assets/07b08eac-b454-4f84-b897-cb85a5937122)
+![Captura de tela de 2025-05-25 00-19-57](https://github.com/user-attachments/assets/1a1646fd-49ac-4d37-af29-232106d907c8)
 
 ---
 
@@ -219,6 +221,10 @@ Plataforma colaborativa para registro de alagamentos, ajudando comunidades a ide
 
 
 ![Captura de tela de 2025-05-25 00-19-43](https://github.com/user-attachments/assets/1c63576a-7205-4e05-973b-0ca417221fba)
+
+
+![Captura de tela de 2025-05-25 00-19-57](https://github.com/user-attachments/assets/7218da39-a3ba-4f53-b02c-57da6e936e3f)
+
 
 ```
 
