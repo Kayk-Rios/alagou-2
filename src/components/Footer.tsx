@@ -57,8 +57,8 @@ export default function Footer() {
               </h3>
               <ul className="mt-4 space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
-                    Política de Privacidade
+                  <a href="/sobre" className="text-gray-400 hover:text-white">
+                  Sobre Alerta
                   </a>
                 </li>
                 <li>
