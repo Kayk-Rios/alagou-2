@@ -1,16 +1,31 @@
+import CreatePostForm from "@/components/posts/CreatePostForm";
+import PostsList from "@/components/posts/PostList";
 
 const AdminPage = () => {
+  return (
+    <div className="container mx-auto p-4 md:p-6">
+    
+      <header className="mb-6">
+        <h1 className="text-2xl font-semibold text-gray-800">Área Administrativa</h1>
+        <p className="text-gray-600 mt-1">Gerencie os conteúdos do sistema</p>
+      </header>
 
+     
+      <div className="grid gap-6 md:grid-cols-3">
+       
+        <section className="md:col-span-1 bg-white rounded-lg border border-gray-200 p-4">
+          <h2 className="text-lg font-medium text-gray-700 mb-4">Novo Post</h2>
+          <CreatePostForm />
+        </section>
 
-
-
-    return (
-      <div className="p-10">
-        <h1 className="text-3xl font-bold">Área do Administrador</h1>
-        <p>Bem-vindo à área restrita para administradores.</p>
+      
+        <section className="md:col-span-2 bg-white rounded-lg border border-gray-200 p-4">
+          <h2 className="text-lg font-medium text-gray-700 mb-4">Posts Existentes</h2>
+          <PostsList />
+        </section>
       </div>
-    );
-  };
-  
-  export default AdminPage;
-  
+    </div>
+  );
+};
+
+export default AdminPage;
