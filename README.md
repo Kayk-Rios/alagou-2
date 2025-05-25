@@ -1,6 +1,3 @@
-![Captura de tela de 2025-05-25 00-19-57](https://github.com/user-attachments/assets/07b08eac-b454-4f84-b897-cb85a5937122)
-![Captura de tela de 2025-05-25 00-19-57](https://github.com/user-attachments/assets/1a1646fd-49ac-4d37-af29-232106d907c8)
-
 ---
 
 ````markdown
