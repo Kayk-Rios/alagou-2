@@ -258,11 +258,12 @@ export default function PostsList() {
             >
               <div className="relative h-48 bg-gray-100 overflow-hidden">
                 {post.imageUrl ? (
-                  <img
-                    src={post.imageUrl}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
+                 ''
+                  // <img
+                  //   src={post.imageUrl}
+                  //   alt={post.title}
+                  //   className="w-full h-full object-cover"
+                  // />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center text-gray-400">
                     <ImageIcon className="h-12 w-12 mb-2" />
