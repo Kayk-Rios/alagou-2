@@ -202,4 +202,19 @@ npm run dev
 
 Plataforma colaborativa para registro de alagamentos, ajudando comunidades a identificar áreas de risco e autoridades a planejar ações preventivas.
 
+![Captura de tela de 2025-05-25 00-18-20](https://github.com/user-attachments/assets/8642c795-ebbc-48fb-8c57-96f087ac1b8e)
+
+
+![Captura de tela de 2025-05-25 00-18-41](https://github.com/user-attachments/assets/813704f3-6e6d-4081-a0cd-5aac26b1cc1c)
+
+
+![Captura de tela de 2025-05-25 00-18-51](https://github.com/user-attachments/assets/da88e6cf-10b9-45c5-902b-331de5e6dbc6)
+
+
+![Captura de tela de 2025-05-25 00-19-01](https://github.com/user-attachments/assets/cc379390-7db3-48b7-b2c0-61d5ef205cc0)
+
+
+
+
+
 ```
