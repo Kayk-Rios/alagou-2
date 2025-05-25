@@ -5,31 +5,7 @@
 
 body {
   color: #272626;
-  background:#52798d;
-}
-/* Estilos de botão */
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  background:rgb(40, 112, 180);
+  
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.bg-red-500 {
-  background-color: #f56565;
-}
-
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
-.hover\:bg-red-600:hover {
-  background-color: #e53e3e;
-}
-
-.transition {
-  transition: all 0.3s ease;
-}
